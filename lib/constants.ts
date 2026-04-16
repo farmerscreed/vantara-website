@@ -155,6 +155,4 @@ export const CONTACT = {
   eyebrow: "Get in Touch",
   heading: "Contact us",
   body: "For general inquiries, press, or partnership discussions — reach us directly.",
-  mapEmbed:
-    "https://www.google.com/maps?q=Port+Harcourt,+Rivers+State,+Nigeria&output=embed",
 } as const;
