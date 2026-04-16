@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a1628;
+  --foreground: #ffffff;
+  --gold: #c8963e;
+  --teal: #2a9d8f;
+  --slate: #1e2d3d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), system-ui, -apple-system, Segoe UI, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer base {
+  ::selection {
+    background: #c8963e;
+    color: #0a1628;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .wrap {
+    @apply mx-auto w-full max-w-wrap px-6 md:px-10;
+  }
+  .eyebrow {
+    @apply font-sans text-xs font-medium uppercase tracking-widest text-gold;
+  }
+  .h-display {
+    @apply font-display text-4xl leading-tight md:text-5xl lg:text-6xl;
+  }
+  .h-section {
+    @apply font-display text-3xl leading-tight md:text-4xl lg:text-5xl;
+  }
+}
